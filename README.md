@@ -2,7 +2,7 @@
 
 > An interactive reference tool for navigating AI compliance across the **EU AI Act** (Regulation 2024/1689) and the **UK DSIT principles-based framework**.
 
-**[→ View live tool](https://YOUR-USERNAME.github.io/ai-governance-compass/)**
+**[![View Live](https://img.shields.io/badge/View%20Live-Open%20Tool-2ea44f?style=for-the-badge)](https://adarsht27.github.io/ai-governance-compass/)**
 
 ---
 
@@ -34,10 +34,8 @@ This tool was built alongside a master's thesis examining how organisations in G
 
 The core finding — that regulatory differences produce distinct *types* of governance (procedural vs. communicative) rather than simply different *levels* — shapes the framing throughout the tool, and most explicitly in the EU vs UK comparison module.
 
-**Thesis:** *How organisations structure AI governance under the EU AI Act and UK principles-based framework*  
-**Supervisor:** Prof. Daniela Stockmann · Hertie School of Governance, Berlin  
-**Method:** MSSD · Qualitative document analysis · Expert interviews · MaxQDA  
-**Submitted:** April 2026
+**Thesis:** *Organising AI Governance Under Divergent Regulatory Frameworks: A Comparative Study of German and UK Firms Under the EU AI Act and the UK Principles-Based Approach*  
+**Method:** Most Similar Systems Design Framework · Thematic document analysis · Expert interviews  
 
 ---
 
@@ -47,33 +45,10 @@ The core finding — that regulatory differences produce distinct *types* of gov
 React 18          — component architecture
 Vite 5            — build tooling and dev server
 CSS Modules       — scoped, conflict-free styling
-gh-pages          — one-command GitHub Pages deployment
+gh-pages          — GitHub Pages deployment
 ```
 
-No backend. No database. No external API calls. All regulatory content lives in `src/data/governance.js` — a single structured data file that powers every module. The entire tool runs statically in the browser.
-
----
-
-## Local development
-
-```bash
-# Clone the repo
-git clone https://github.com/YOUR-USERNAME/ai-governance-compass.git
-cd ai-governance-compass/ai-governance-tool
-
-# Install dependencies
-npm install
-
-# Start dev server
-npm run dev
-# → http://localhost:5173/ai-governance-compass/
-
-# Build for production
-npm run build
-
-# Deploy to GitHub Pages
-npm run deploy
-```
+All regulatory content lives in `src/data/governance.js` — a single structured data file that powers every module. The entire tool runs statically in the browser.
 
 ---
 
@@ -91,16 +66,7 @@ ai-governance-tool/
 │   ├── data/
 │   │   └── governance.js      # all regulatory content
 │   └── components/
-│       ├── Header.jsx/css
-│       ├── Hero.jsx/css
-│       ├── EURiskExplorer.jsx/css
-│       ├── GPAIExplorer.jsx/css
-│       ├── UKFramework.jsx/css
-│       ├── Comparison.jsx/css
-│       ├── Timeline.jsx/css
-│       ├── Assessment.jsx/css
-│       ├── About.jsx/css
-│       └── Footer.jsx/css
+
 ```
 
 ---
@@ -123,8 +89,35 @@ For educational and research purposes only. This tool synthesises publicly avail
 
 ---
 
+## Contributing
+
+Contributions are welcome, especially for:
+
+- Factual corrections to EU/UK regulatory references
+- Typos, broken links, and UI/accessibility fixes
+- Clarifying language (without changing meaning)
+
+Before submitting a pull request:
+
+- Open an issue describing the change and why it’s needed (screenshots or references appreciated).
+- For regulatory/content changes, include a source link and the “as of” date for the claim.
+
+By contributing, you agree that your contributions may be redistributed under the project’s license(s).
+
+---
+
+## License
+
+Code in this repository is licensed under the MIT License.
+
+Non-code content (e.g., regulatory summaries, explanatory text, the self-assessment questions, and other written material) is licensed under Creative Commons Attribution 4.0 International (CC BY 4.0).
+
+Third-party materials, if any, remain under their respective licenses. If you believe any content is incorrectly attributed or should be removed, please open an issue.
+
+---
+
 ## Author
 
 **Adarsh Tripathi**  
 Public Policy / Data Science Candidate · Hertie School, Berlin  
-[LinkedIn](https://www.linkedin.com/in/adarsht/) · [Live tool](https://YOUR-USERNAME.github.io/ai-governance-compass/)
+[LinkedIn](https://www.linkedin.com/in/adarsht/)

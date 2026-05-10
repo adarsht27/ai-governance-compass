@@ -65,14 +65,34 @@ export default function EURiskExplorer() {
             <p className="section-label" style={{ marginTop: '1.25rem' }}>
               {tier.id === 'unacceptable' ? 'Prohibited practices' : 'Examples'}
             </p>
-            <ul className={styles.list}>
-              {(tier.examples || []).map((ex, i) => (
-                <li key={i} className={styles.listItem}>
-                  <span className={styles.bullet} style={{ color: tier.color }}>›</span>
-                  {ex}
-                </li>
-              ))}
-            </ul>
+            {tier.id === 'high' ? (
+              <ul className={styles.list}>
+                {[
+                  'AI used in employment decisions: CV screening, interview evaluation, promotion, termination',
+                  'AI determining access to education, training institutions, or assessing learning outcomes',
+                  'AI in credit scoring, insurance risk assessment, or essential public benefit allocation',
+                  'AI safety components in critical infrastructure: energy, water, transport, digital networks',
+                  'AI used in law enforcement: risk profiling, evidence evaluation, re-offending prediction',
+                  'AI in migration, asylum processing, or border management decisions',
+                  'AI in administration of justice or influencing elections and voting behaviour',
+                  'Remote biometric identification systems and emotion recognition in regulated contexts',
+                ].map((ex, i) => (
+                  <li key={i} className={styles.listItem}>
+                    <span className={styles.bullet} style={{ color: tier.color }}>›</span>
+                    {ex}
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              <ul className={styles.list}>
+                {(tier.examples || []).map((ex, i) => (
+                  <li key={i} className={styles.listItem}>
+                    <span className={styles.bullet} style={{ color: tier.color }}>›</span>
+                    {ex}
+                  </li>
+                ))}
+              </ul>
+            )}
             {(tier.providerObligations || []).length > 0 && tier.id !== 'high' && (
               <>
                 <p className="section-label" style={{ marginTop: '1.25rem' }}>Obligations</p>

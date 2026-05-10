@@ -5,14 +5,9 @@ export default function Header({ activeTab, onTabChange, tabs }) {
     <header className={styles.header}>
       <div className={styles.inner}>
         <div className={styles.brand}>
-          <div className={styles.logo}>
-            <span className={styles.logoEU}>EU</span>
-            <span className={styles.logoDivider}>/</span>
-            <span className={styles.logoUK}>UK</span>
-          </div>
           <div>
             <div className={styles.title}>AI Governance Compass</div>
-            <div className={styles.subtitle}>EU AI Act & UK Framework Explorer</div>
+            <div className={styles.subtitle}>EU AI Act &amp; UK Framework Explorer</div>
           </div>
         </div>
         <nav className={styles.nav} aria-label="Main navigation">

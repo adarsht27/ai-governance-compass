@@ -36,10 +36,11 @@ export default function About({ onNavigate }) {
 
       {/* Developer section */}
       <div className={styles.developerSection}>
-        <div className={styles.photoPlaceholder}>
-          <span className={styles.photoInitials}>AT</span>
-          <span className={styles.photoNote}>Photo coming soon</span>
-        </div>
+        <img
+          src="/ai-governance-compass/adarsh.png"
+          alt="Adarsh Tripathi"
+          className={styles.photo}
+        />
         <div className={styles.developerInfo}>
           <p className="section-label">About the developer</p>
           <h2 className={styles.name}>Adarsh Tripathi</h2>
@@ -54,15 +55,22 @@ export default function About({ onNavigate }) {
             </a>
           </div>
           <p className={styles.bio}>
-            I am a graduate student at the Hertie School of Governance in Berlin, where I study
-            the intersection of public policy and data science. My academic work focuses on how
-            institutions respond to emerging technology — specifically, how regulatory frameworks
-            shape organisational behaviour around AI.
+            I am a dual-degree candidate in Public Policy and Data Science at the Hertie School
+            of Governance in Berlin. My work sits at the intersection of institutions, technology,
+            and evidence — asking not just what AI can do, but how it gets governed, measured,
+            and embedded into organisations and societies.
           </p>
           <p className={styles.bio}>
-            Before Hertie, I worked across policy and research contexts that brought me into regular
-            contact with questions about how governance structures adapt — or fail to adapt — to
-            technological change. That thread runs through my thesis and into this tool.
+            Before Hertie, I worked as a Senior Programme Officer at India's Ministry of Social
+            Justice and Empowerment, designing monitoring frameworks for national social protection
+            schemes — work that put me inside government at the point where data meets decisions.
+            At Hertie, I have been building on that foundation in two directions at once: deeper
+            into technical ground through machine learning, NLP, and causal inference; and deeper
+            into the social dimensions of technology through computational social science, AI ethics,
+            and digital governance. I am drawn to questions that sit between these two worlds — how
+            AI systems are built, trained, documented, and evaluated; how accountability gets
+            operationalised inside organisations; and what it means to make these questions more
+            accessible to people who need to act on them. This tool is one attempt at the last one.
           </p>
         </div>
       </div>
