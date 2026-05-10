@@ -2,7 +2,7 @@
 
 An interactive tool for navigating AI compliance under the **EU AI Act (Regulation 2024/1689)** and the **UK DSIT principles-based framework**. Built as a portfolio project demonstrating AI governance knowledge.
 
-**Live demo:** `https://YOUR-USERNAME.github.io/ai-governance-compass/`
+**Live demo:** `https://adarsht27.github.io/ai-governance-compass/`
 
 ---
 
@@ -26,79 +26,6 @@ An interactive tool for navigating AI compliance under the **EU AI Act (Regulati
 - **gh-pages** — one-command GitHub Pages deployment
 - No external UI library — fully custom design
 
----
-
-## 🚀 Deploy to GitHub Pages (step by step)
-
-### Step 1 — Create a GitHub repository
-
-1. Go to [github.com/new](https://github.com/new)
-2. Name it `ai-governance-compass` (or any name you prefer)
-3. Set it to **Public**
-4. Click **Create repository**
-
-### Step 2 — Update the base path
-
-In `vite.config.js`, change `'ai-governance-compass'` to match your repo name:
-
-```js
-base: '/YOUR-REPO-NAME/',
-```
-
-### Step 3 — Update package.json homepage (optional but good practice)
-
-Add this to `package.json`:
-```json
-"homepage": "https://YOUR-USERNAME.github.io/YOUR-REPO-NAME"
-```
-
-### Step 4 — Install dependencies
-
-```bash
-npm install
-```
-
-### Step 5 — Test locally
-
-```bash
-npm run dev
-```
-
-Open `http://localhost:5173/ai-governance-compass/` in your browser.
-
-### Step 6 — Push to GitHub
-
-```bash
-git init
-git add .
-git commit -m "Initial commit — AI Governance Compass"
-git branch -M main
-git remote add origin https://github.com/YOUR-USERNAME/ai-governance-compass.git
-git push -u origin main
-```
-
-### Step 7 — Deploy to GitHub Pages
-
-```bash
-npm run deploy
-```
-
-This builds the project and pushes the `dist/` folder to a `gh-pages` branch automatically.
-
-### Step 8 — Enable GitHub Pages
-
-1. Go to your repo on GitHub → **Settings** → **Pages**
-2. Under **Source**, select **Deploy from a branch**
-3. Select branch: `gh-pages`, folder: `/ (root)`
-4. Click **Save**
-5. Wait ~2 minutes, then visit `https://YOUR-USERNAME.github.io/ai-governance-compass/`
-
-### Future updates
-
-After making changes, just run:
-```bash
-npm run deploy
-```
 
 ---
 
@@ -148,4 +75,4 @@ For educational and research purposes only. Not legal advice. Consult qualified 
 
 ---
 
-*Built by Adarsh — MPP/Data Science candidate, Hertie School Berlin. Research focus: AI governance and institutional isomorphism.*
+*Built by Adarsh Tripathi — MPP/Data Science candidate, Hertie School Berlin.*
