@@ -25,10 +25,9 @@ export default function Footer() {
           <a href="https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" target="_blank" rel="noopener">EU AI Act (official text)</a>
         </div>
       </div>
-      <div className={styles.inspiration}>
-        Inspired by the EU AI Act resource published by the{' '}
-        <a href="https://artificialintelligenceact.eu" target="_blank" rel="noopener">Future of Life Institute</a>.
-        Last updated May 2026.
+      <div className={styles.disclaimer}>
+        For educational and research purposes only. This tool synthesises publicly available regulatory guidance and does not constitute legal advice.
+        Always consult the source regulation and qualified legal counsel for compliance decisions. Last updated May 2026.
       </div>
     </footer>
   )

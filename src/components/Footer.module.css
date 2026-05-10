@@ -28,12 +28,11 @@
 .links a { font-size: 12px; color: rgba(255,255,255,0.5); text-decoration: none; }
 .links a:hover { color: #fff; }
 
-.inspiration {
+.disclaimer {
   max-width: 1100px; margin: 0 auto;
   font-size: 11px; color: rgba(255,255,255,0.35);
   font-family: var(--font-mono);
   border-top: 1px solid rgba(255,255,255,0.08);
   padding-top: 0.75rem;
+  line-height: 1.6;
 }
-.inspiration a { color: rgba(255,255,255,0.45); text-decoration: underline; text-underline-offset: 2px; }
-.inspiration a:hover { color: rgba(255,255,255,0.7); }

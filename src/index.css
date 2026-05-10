@@ -93,3 +93,13 @@ button { font-family: var(--font-body); cursor: pointer; border: none; backgroun
 @media (max-width: 768px) {
   .card { padding: 1rem; }
 }
+
+/* Hero about card variant */
+.about {
+  background: var(--paper2);
+  border-color: var(--border-strong) !important;
+}
+.about:hover {
+  border-color: var(--ink) !important;
+}
+.about .cardLabel { color: var(--ink); }

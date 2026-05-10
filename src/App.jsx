@@ -7,6 +7,7 @@ import UKFramework from './components/UKFramework.jsx'
 import Comparison from './components/Comparison.jsx'
 import Assessment from './components/Assessment.jsx'
 import Timeline from './components/Timeline.jsx'
+import About from './components/About.jsx'
 import Footer from './components/Footer.jsx'
 import styles from './App.module.css'
 
@@ -18,6 +19,7 @@ const TABS = [
   { id: 'compare', label: 'EU vs UK' },
   { id: 'timeline', label: 'Timeline' },
   { id: 'assess', label: '⚡ Self-Assessment' },
+  { id: 'about', label: 'About' },
 ]
 
 export default function App() {
@@ -32,6 +34,7 @@ export default function App() {
       case 'compare': return <Comparison />
       case 'timeline': return <Timeline />
       case 'assess': return <Assessment />
+      case 'about': return <About onNavigate={setActiveTab} />
       default: return <Hero onNavigate={setActiveTab} />
     }
   }

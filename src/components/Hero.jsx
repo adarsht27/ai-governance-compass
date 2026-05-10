@@ -7,6 +7,7 @@ const CARDS = [
   { id: 'compare', icon: '⟷', color: 'both', label: 'EU vs UK', desc: 'Side-by-side comparison of 15 governance dimensions with divergence analysis' },
   { id: 'timeline', icon: '◷', color: 'eu', label: 'Timeline', desc: 'Key enforcement dates from Feb 2025 through to Dec 2030' },
   { id: 'assess', icon: '⚡', color: 'assess', label: 'Self-Assessment', desc: 'Answer questions about your AI system to get a tailored compliance checklist' },
+  { id: 'about', icon: '◉', color: 'about', label: 'About', desc: 'The research and researcher behind this tool' },
 ]
 
 export default function Hero({ onNavigate }) {
@@ -41,17 +42,6 @@ export default function Hero({ onNavigate }) {
             <div className={styles.cardDesc}>{card.desc}</div>
           </button>
         ))}
-      </div>
-
-      <div className={styles.disclaimer}>
-        <strong>For educational and research purposes only.</strong> This tool synthesises publicly available
-        regulatory guidance and does not constitute legal advice. Always consult the source regulation
-        and qualified legal counsel for compliance decisions.
-        <br />
-        Sources:{' '}
-        <a href="https://digital-strategy.ec.europa.eu/en/policies/european-approach-artificial-intelligence" target="_blank" rel="noopener">European Commission — AI policy</a>{' · '}
-        <a href="https://www.gov.uk/government/publications/ai-regulation-a-pro-innovation-approach" target="_blank" rel="noopener">UK DSIT White Paper</a>{' · '}
-        <a href="https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" target="_blank" rel="noopener">EU AI Act (official text)</a>
       </div>
     </div>
   )
