@@ -8,20 +8,32 @@
 .inner {
   max-width: 1100px; margin: 0 auto;
   display: flex; align-items: center; justify-content: space-between;
-  flex-wrap: wrap; gap: 0.75rem; margin-bottom: 0.5rem;
+  flex-wrap: wrap; gap: 0.75rem; margin-bottom: 0.75rem;
 }
 
 .left { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
 .name { font-family: var(--font-display); font-size: 14px; color: #fff; }
 .sep { color: rgba(255,255,255,0.3); }
-.credit { font-size: 13px; }
+.credit { font-size: 13px; color: rgba(255,255,255,0.6); }
+
+.creditLink {
+  color: rgba(255,255,255,0.85);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-color: rgba(255,255,255,0.3);
+}
+.creditLink:hover { color: #fff; text-decoration-color: rgba(255,255,255,0.7); }
 
 .links { display: flex; gap: 1rem; flex-wrap: wrap; }
 .links a { font-size: 12px; color: rgba(255,255,255,0.5); text-decoration: none; }
 .links a:hover { color: #fff; }
 
-.disclaimer {
+.inspiration {
   max-width: 1100px; margin: 0 auto;
   font-size: 11px; color: rgba(255,255,255,0.35);
   font-family: var(--font-mono);
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding-top: 0.75rem;
 }
+.inspiration a { color: rgba(255,255,255,0.45); text-decoration: underline; text-underline-offset: 2px; }
+.inspiration a:hover { color: rgba(255,255,255,0.7); }

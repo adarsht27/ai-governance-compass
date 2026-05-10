@@ -44,11 +44,14 @@ export default function Hero({ onNavigate }) {
       </div>
 
       <div className={styles.disclaimer}>
-        <strong>For educational and research purposes.</strong> This tool synthesises publicly available
-        regulatory guidance. It does not constitute legal advice. Always consult the source regulation
+        <strong>For educational and research purposes only.</strong> This tool synthesises publicly available
+        regulatory guidance and does not constitute legal advice. Always consult the source regulation
         and qualified legal counsel for compliance decisions.
-        Sources: <a href="https://artificialintelligenceact.eu" target="_blank" rel="noopener">EU AI Act (Future of Life Institute)</a> ·{' '}
-        <a href="https://www.gov.uk/government/publications/ai-regulation-a-pro-innovation-approach" target="_blank" rel="noopener">UK DSIT White Paper</a>
+        <br />
+        Sources:{' '}
+        <a href="https://digital-strategy.ec.europa.eu/en/policies/european-approach-artificial-intelligence" target="_blank" rel="noopener">European Commission — AI policy</a>{' · '}
+        <a href="https://www.gov.uk/government/publications/ai-regulation-a-pro-innovation-approach" target="_blank" rel="noopener">UK DSIT White Paper</a>{' · '}
+        <a href="https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai" target="_blank" rel="noopener">EU AI Act (official text)</a>
       </div>
     </div>
   )
