@@ -1,0 +1,40 @@
+.wrap { max-width: 960px; }
+.pageHeader { margin-bottom: 1.5rem; }
+.heading { font-size: clamp(1.6rem, 3vw, 2.2rem); margin-bottom: 0.5rem; }
+.subhead { font-size: 15px; color: var(--ink2); max-width: 680px; }
+
+.legend { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 1rem; align-items: center; }
+.filterBtn { display: flex; align-items: center; gap: 6px; font-size: 12px; padding: 5px 12px; border-radius: 100px; border: 1px solid var(--border); background: #fff; color: var(--ink3); transition: all var(--transition); }
+.filterBtn:hover { background: var(--paper2); color: var(--ink); }
+.filterActive { background: var(--ink); color: #fff; border-color: var(--ink); }
+.dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
+.high { background: var(--eu-red); }
+.medium { background: var(--amber); }
+.low { background: var(--green); }
+
+.tableWrap { overflow-x: auto; margin-bottom: 2rem; border-radius: var(--radius-lg); border: 1px solid var(--border); box-shadow: var(--shadow-sm); }
+.table { width: 100%; border-collapse: collapse; font-size: 13px; background: #fff; }
+.table thead tr { background: var(--paper2); border-bottom: 2px solid var(--border-strong); }
+.thDim, .thEU, .thUK, .thDiv { padding: 12px 14px; text-align: left; font-family: var(--font-body); font-weight: 500; font-size: 12px; color: var(--ink3); white-space: nowrap; }
+.thDim { width: 180px; }
+.thDiv { width: 110px; }
+
+.row { border-bottom: 1px solid var(--border); transition: background var(--transition); }
+.row:last-child { border-bottom: none; }
+.row:hover { background: var(--paper); }
+
+.dimCell { padding: 11px 14px; font-weight: 500; font-size: 12px; color: var(--ink); vertical-align: top; }
+.euCell { padding: 11px 14px; font-size: 13px; color: var(--eu-blue); vertical-align: top; line-height: 1.55; }
+.ukCell { padding: 11px 14px; font-size: 13px; color: var(--uk-teal); vertical-align: top; line-height: 1.55; }
+.divCell { padding: 11px 14px; vertical-align: top; }
+
+.divBadge { display: inline-block; font-size: 10px; font-family: var(--font-mono); padding: 3px 8px; border-radius: 100px; font-weight: 500; }
+.divBadge.high { background: var(--eu-red-light); color: var(--eu-red); }
+.divBadge.medium { background: var(--amber-light); color: var(--amber); }
+.divBadge.low { background: var(--green-light); color: var(--green); }
+
+.synthBox { background: #fff; border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 1.5rem; box-shadow: var(--shadow-sm); }
+.synthTitle { font-family: var(--font-display); font-size: 1.2rem; margin-bottom: 1rem; }
+.synthGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+@media (max-width: 640px) { .synthGrid { grid-template-columns: 1fr; } }
+.synthText { font-size: 13px; color: var(--ink2); line-height: 1.7; margin-top: 0.4rem; }

@@ -1,0 +1,82 @@
+.hero { max-width: 820px; margin: 0 auto; }
+
+.eyebrow {
+  display: flex; gap: 8px; flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.heading {
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 1.15;
+  color: var(--ink);
+  margin-bottom: 1.25rem;
+}
+.heading em { color: var(--eu-red); font-style: italic; }
+
+.lead {
+  font-size: 17px;
+  color: var(--ink2);
+  line-height: 1.7;
+  max-width: 620px;
+  margin-bottom: 2.5rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.card {
+  text-align: left;
+  padding: 1.25rem;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  background: #fff;
+  transition: all var(--transition);
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+}
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+  border-color: var(--border-strong);
+}
+
+.eu:hover { border-color: var(--eu-blue-mid); }
+.uk:hover { border-color: var(--uk-teal-mid); }
+.both:hover { border-color: var(--eu-red-mid); }
+.assess { background: var(--ink); color: #fff; border-color: var(--ink); }
+.assess:hover { background: var(--ink2); }
+.assess .cardDesc { color: rgba(255,255,255,0.7); }
+
+.cardIcon {
+  font-size: 22px;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.cardLabel {
+  font-family: var(--font-display);
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  color: var(--ink);
+}
+.assess .cardLabel { color: #fff; }
+
+.cardDesc {
+  font-size: 13px;
+  color: var(--ink3);
+  line-height: 1.55;
+}
+
+.disclaimer {
+  font-size: 12px;
+  color: var(--ink3);
+  border-top: 1px solid var(--border);
+  padding-top: 1.25rem;
+  line-height: 1.6;
+}
+.disclaimer a { color: var(--eu-blue); }

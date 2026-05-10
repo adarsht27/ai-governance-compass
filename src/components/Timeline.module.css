@@ -1,0 +1,38 @@
+.wrap { max-width: 860px; }
+.pageHeader { margin-bottom: 1.5rem; }
+.heading { font-size: clamp(1.6rem, 3vw, 2.2rem); margin-bottom: 0.5rem; }
+.subhead { font-size: 15px; color: var(--ink2); max-width: 620px; }
+
+.digitalOmnibus { background: var(--amber-light); border: 1px solid var(--amber-mid); border-radius: var(--radius-lg); padding: 1rem 1.25rem; margin-bottom: 2rem; font-size: 13px; color: var(--ink2); line-height: 1.65; }
+
+.timeline { margin-bottom: 2.5rem; }
+
+.item { display: flex; gap: 1.25rem; }
+.connector { display: flex; flex-direction: column; align-items: center; flex-shrink: 0; }
+.dot { width: 14px; height: 14px; border-radius: 50%; flex-shrink: 0; border: 2px solid #fff; box-shadow: 0 0 0 2px currentColor; }
+.line { flex: 1; width: 1px; background: var(--border-strong); margin: 4px 0; min-height: 40px; }
+
+.content { padding-bottom: 1.75rem; flex: 1; }
+
+.done .content { opacity: 1; }
+.future .content { opacity: 0.6; }
+
+.dateRow { display: flex; align-items: center; gap: 10px; margin-bottom: 4px; }
+.date { font-family: var(--font-mono); font-size: 13px; font-weight: 500; color: var(--ink); }
+.statusBadge { font-family: var(--font-mono); font-size: 10px; font-weight: 500; }
+.label { font-family: var(--font-display); font-size: 1.05rem; font-weight: 600; color: var(--ink); margin-bottom: 4px; }
+.detail { font-size: 13px; color: var(--ink3); line-height: 1.6; }
+
+.nowBox { background: #fff; border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 1.25rem; margin-bottom: 2rem; box-shadow: var(--shadow-sm); }
+.nowGrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.75rem; margin-top: 0.75rem; }
+.nowItem { padding: 10px; background: var(--paper); border-radius: var(--radius); border: 1px solid var(--border); }
+.nowStatus { font-family: var(--font-mono); font-size: 11px; font-weight: 600; margin-bottom: 4px; }
+.nowLabel { font-size: 13px; font-weight: 500; color: var(--ink); margin-bottom: 3px; }
+.nowSince { font-size: 11px; font-family: var(--font-mono); color: var(--ink3); }
+
+.sectionHeading { font-family: var(--font-display); font-size: 1.35rem; margin-bottom: 1rem; }
+.ukGrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; }
+.ukItem { }
+.ukDate { font-family: var(--font-mono); font-size: 13px; font-weight: 600; color: var(--uk-teal); margin-bottom: 4px; }
+.ukLabel { font-size: 14px; font-weight: 500; color: var(--ink); margin-bottom: 6px; }
+.ukNote { font-size: 13px; color: var(--ink3); line-height: 1.55; }

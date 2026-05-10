@@ -1,0 +1,42 @@
+.wrap { max-width: 960px; }
+.pageHeader { margin-bottom: 2rem; }
+.heading { font-size: clamp(1.6rem, 3vw, 2.2rem); margin-bottom: 0.5rem; }
+.subhead { font-size: 15px; color: var(--ink2); max-width: 620px; }
+
+.definition {
+  background: var(--eu-blue-light); border: 1px solid var(--eu-blue-mid);
+  border-radius: var(--radius-lg); padding: 1.25rem; margin-bottom: 1.5rem;
+}
+.defText { font-size: 14px; color: var(--ink2); line-height: 1.65; margin-top: 0.5rem; }
+.openSourceNote { margin-top: 0.75rem; font-size: 13px; color: var(--eu-blue); background: rgba(255,255,255,0.6); border-radius: var(--radius); padding: 10px 12px; }
+
+.tiers { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 2rem; }
+@media (max-width: 640px) { .tiers { grid-template-columns: 1fr; } }
+
+.tierCard { background: #fff; border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 1.25rem; }
+.systemic { border: 2px solid var(--eu-red); background: var(--eu-red-light); }
+.tierHeader { margin-bottom: 1rem; }
+.tierLabel { font-family: var(--font-display); font-size: 1.1rem; font-weight: 600; color: var(--ink); }
+.tierThreshold { font-size: 12px; font-family: var(--font-mono); color: var(--ink3); margin-top: 4px; }
+
+.obList { list-style: none; }
+.obItem { display: flex; gap: 8px; font-size: 13px; color: var(--ink2); padding: 6px 0; border-bottom: 1px solid var(--border); line-height: 1.5; }
+.obItem:last-child { border-bottom: none; }
+.obBullet { color: var(--eu-blue); flex-shrink: 0; font-size: 14px; }
+.systemic .obBullet { color: var(--eu-red); }
+.obNote { font-style: italic; color: var(--ink3); }
+
+.codePractice { margin-top: 0.75rem; font-size: 12px; color: var(--eu-red); background: rgba(255,255,255,0.6); border-radius: var(--radius); padding: 10px 12px; line-height: 1.5; }
+.penalty { margin-top: 0.75rem; font-size: 12px; font-family: var(--font-mono); color: var(--eu-red); font-weight: 500; }
+
+.valueChain { margin-bottom: 1.5rem; }
+.sectionHeading { font-size: 1.35rem; margin-bottom: 1rem; }
+.chainGrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; }
+.chainCard { }
+.chainRole { font-family: var(--font-display); font-size: 1.05rem; font-weight: 600; margin-bottom: 4px; }
+.chainEg { font-size: 12px; font-family: var(--font-mono); color: var(--ink3); margin-bottom: 0.75rem; }
+.chainDuty { font-size: 13px; color: var(--ink2); line-height: 1.6; }
+
+.notificationBox { background: var(--amber-light); border: 1px solid var(--amber-mid); border-radius: var(--radius-lg); padding: 1.25rem; }
+.notifTitle { font-weight: 600; color: var(--amber); margin-bottom: 0.5rem; font-family: var(--font-mono); font-size: 13px; }
+.notificationBox p { font-size: 14px; color: var(--ink2); line-height: 1.65; }

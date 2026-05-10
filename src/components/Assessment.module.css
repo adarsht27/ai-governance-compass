@@ -1,0 +1,63 @@
+.wrap { max-width: 740px; }
+.pageHeader { margin-bottom: 2rem; }
+.heading { font-size: clamp(1.6rem, 3vw, 2.2rem); margin-bottom: 0.5rem; }
+.subhead { font-size: 15px; color: var(--ink2); max-width: 560px; }
+
+.sectionBlock { margin-bottom: 2rem; }
+.sectionTitle { font-family: var(--font-mono); font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--eu-blue); padding: 6px 0; border-bottom: 2px solid var(--eu-blue-mid); margin-bottom: 1rem; }
+
+.questionBlock { margin-bottom: 1.25rem; }
+.qText { font-size: 15px; color: var(--ink); font-weight: 500; margin-bottom: 0.75rem; line-height: 1.5; }
+
+.optionList { display: flex; flex-direction: column; gap: 6px; }
+.option { display: flex; align-items: flex-start; gap: 10px; padding: 10px 13px; border-radius: var(--radius-lg); border: 1.5px solid var(--border); background: #fff; cursor: pointer; font-size: 14px; color: var(--ink2); transition: all var(--transition); line-height: 1.5; }
+.option:hover { border-color: var(--border-strong); background: var(--paper); }
+.option input { margin-top: 2px; flex-shrink: 0; accent-color: var(--eu-blue); }
+.optionSelected { border-color: var(--eu-blue); background: var(--eu-blue-light); color: var(--ink); }
+
+.yesnoRow { display: flex; gap: 8px; }
+.yesno { display: flex; align-items: center; gap: 7px; padding: 8px 16px; border-radius: var(--radius); border: 1.5px solid var(--border); background: #fff; cursor: pointer; font-size: 14px; font-weight: 500; color: var(--ink3); transition: all var(--transition); }
+.yesno:hover { border-color: var(--border-strong); }
+.yesno input { accent-color: var(--eu-blue); }
+.yn_yes { border-color: var(--eu-red); background: var(--eu-red-light); color: var(--eu-red); }
+.yn_no { border-color: var(--green); background: var(--green-light); color: var(--green); }
+.yn_unsure { border-color: var(--amber); background: var(--amber-light); color: var(--amber); }
+
+.submitBtn { padding: 12px 28px; background: var(--ink); color: #fff; border-radius: var(--radius-lg); font-size: 15px; font-weight: 500; transition: all var(--transition); margin-top: 1rem; }
+.submitBtn:hover { background: var(--ink2); }
+.submitDisabled { opacity: 0.45; cursor: not-allowed; }
+.requiredNote { font-size: 12px; color: var(--ink3); margin-top: 0.5rem; }
+
+/* Results */
+.results { max-width: 740px; }
+.resultsHeader { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem; }
+.resultsTitle { font-family: var(--font-display); font-size: 1.5rem; }
+.resetBtn { font-size: 13px; color: var(--ink3); padding: 6px 12px; border-radius: var(--radius); border: 1px solid var(--border); background: #fff; transition: all var(--transition); }
+.resetBtn:hover { background: var(--paper2); color: var(--ink); }
+
+.jurisdictions { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 1.5rem; }
+
+.section { margin-bottom: 1.75rem; }
+
+.oblCard { border-radius: var(--radius-lg); padding: 1rem 1.25rem; margin-bottom: 0.75rem; border: 1px solid; }
+.oblLabel { font-weight: 600; font-size: 14px; margin-bottom: 6px; }
+.oblDetail { font-size: 13px; line-height: 1.65; }
+
+.danger { background: var(--eu-red-light); border-color: var(--eu-red-mid); color: var(--eu-red); }
+.danger .oblDetail { color: var(--ink2); }
+.warn { background: var(--amber-light); border-color: var(--amber-mid); }
+.warn .oblLabel { color: var(--amber); }
+.warn .oblDetail { color: var(--ink2); }
+.info { background: var(--eu-blue-light); border-color: var(--eu-blue-mid); }
+.info .oblLabel { color: var(--eu-blue); }
+.info .oblDetail { color: var(--ink2); }
+.ok { background: var(--green-light); border-color: var(--green-mid); }
+.ok .oblLabel { color: var(--green); }
+.ok .oblDetail { color: var(--ink2); }
+
+.ukList { list-style: none; }
+.ukStep { display: flex; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--border); font-size: 14px; color: var(--ink2); line-height: 1.55; align-items: flex-start; }
+.ukStep:last-child { border-bottom: none; }
+.stepNum { font-family: var(--font-mono); font-size: 12px; font-weight: 600; color: var(--uk-teal); flex-shrink: 0; min-width: 20px; padding-top: 1px; }
+
+.disclaimer { margin-top: 1.5rem; font-size: 12px; color: var(--ink3); border-top: 1px solid var(--border); padding-top: 1rem; line-height: 1.6; }
