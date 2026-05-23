@@ -52,7 +52,7 @@ export default function EURiskExplorer() {
         {/* View tabs for high-risk */}
         {tier.id === 'high' && (
           <div className={styles.viewTabs}>
-            {[['overview','Examples'], ['annex', 'Annex III Uses'], ['provider','Provider obligations'], ['deployer','Deployer obligations']].map(([v,l]) => (
+            {[['overview','Examples'], ['annex', 'Annex III Uses'], ['annexI', 'Annex I Products'], ['provider','Provider obligations'], ['deployer','Deployer obligations']].map(([v,l]) => (
               <button key={v} className={`${styles.viewTab} ${view===v?styles.viewTabActive:''}`}
                 onClick={() => setView(v)}>{l}</button>
             ))}
@@ -65,34 +65,23 @@ export default function EURiskExplorer() {
             <p className="section-label" style={{ marginTop: '1.25rem' }}>
               {tier.id === 'unacceptable' ? 'Prohibited practices' : 'Examples'}
             </p>
-            {tier.id === 'high' ? (
-              <ul className={styles.list}>
-                {[
-                  'AI used in employment decisions: CV screening, interview evaluation, promotion, termination',
-                  'AI determining access to education, training institutions, or assessing learning outcomes',
-                  'AI in credit scoring, insurance risk assessment, or essential public benefit allocation',
-                  'AI safety components in critical infrastructure: energy, water, transport, digital networks',
-                  'AI used in law enforcement: risk profiling, evidence evaluation, re-offending prediction',
-                  'AI in migration, asylum processing, or border management decisions',
-                  'AI in administration of justice or influencing elections and voting behaviour',
-                  'Remote biometric identification systems and emotion recognition in regulated contexts',
-                ].map((ex, i) => (
-                  <li key={i} className={styles.listItem}>
-                    <span className={styles.bullet} style={{ color: tier.color }}>›</span>
-                    {ex}
-                  </li>
-                ))}
-              </ul>
-            ) : (
-              <ul className={styles.list}>
-                {(tier.examples || []).map((ex, i) => (
-                  <li key={i} className={styles.listItem}>
-                    <span className={styles.bullet} style={{ color: tier.color }}>›</span>
-                    {ex}
-                  </li>
-                ))}
-              </ul>
-            )}
+            <ul className={styles.list}>
+              {(tier.id === 'high' ? [
+                'Employment: CV screening, interview evaluation, promotion and termination decisions',
+                'Education: access to institutions, learning outcome assessment, exam monitoring',
+                'Credit scoring, insurance risk assessment, essential public benefit allocation',
+                'Critical infrastructure safety components: energy, water, transport, digital networks',
+                'Law enforcement: risk profiling, evidence evaluation, re-offending prediction',
+                'Migration, asylum processing, and border management decisions',
+                'Administration of justice and AI influencing elections or voting behaviour',
+                'Remote biometric identification and emotion recognition in regulated contexts',
+              ] : (tier.examples || [])).map((ex, i) => (
+                <li key={i} className={styles.listItem}>
+                  <span className={styles.bullet} style={{ color: tier.color }}>›</span>
+                  {ex}
+                </li>
+              ))}
+            </ul>
             {(tier.providerObligations || []).length > 0 && tier.id !== 'high' && (
               <>
                 <p className="section-label" style={{ marginTop: '1.25rem' }}>Obligations</p>
@@ -122,6 +111,33 @@ export default function EURiskExplorer() {
                 </ul>
               </div>
             ))}
+          </div>
+        )}
+
+        {tier.id === 'high' && view === 'annexI' && (
+          <div>
+            <p style={{ fontSize: '13px', color: 'var(--ink3)', marginBottom: '1rem', marginTop: '0.5rem' }}>
+              AI embedded as a safety component in products covered by EU harmonisation legislation is
+              automatically high-risk under <strong>Annex I</strong> — provided that product also requires
+              third-party conformity assessment. Compliance deadline: <strong>August 2027</strong>.
+            </p>
+            <div className={styles.annexGrid}>
+              {(tier.annexI || []).map((sec, i) => (
+                <div key={i} className={styles.annexCard}>
+                  <div className={styles.annexSector}>{sec.sector}</div>
+                  <div style={{ fontSize: '10px', fontFamily: 'var(--font-mono)', color: 'var(--ink3)', marginBottom: '6px' }}>{sec.law}</div>
+                  <ul className={styles.annexList}>
+                    {sec.examples.map((u, j) => <li key={j}>{u}</li>)}
+                  </ul>
+                </div>
+              ))}
+            </div>
+            <div style={{ marginTop: '1rem', padding: '10px 14px', background: 'var(--amber-light)', borderRadius: 'var(--radius)', border: '1px solid var(--amber-mid)', fontSize: '13px', color: 'var(--ink2)' }}>
+              <strong>Dual compliance note:</strong> Annex I products must comply with both their sector legislation
+              (MDR, Machinery Regulation, etc.) AND the EU AI Act high-risk obligations. The AI Act allows
+              manufacturers to integrate AI Act testing into their existing conformity assessment processes
+              to avoid duplication. The Cyber Resilience Act (CRA, Dec 2027) adds further cybersecurity requirements.
+            </div>
           </div>
         )}
 

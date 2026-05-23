@@ -7,6 +7,7 @@ const CARDS = [
   { id: 'compare', icon: '⟷', color: 'both', label: 'EU vs UK', desc: 'Side-by-side comparison of 15 governance dimensions with divergence analysis' },
   { id: 'timeline', icon: '◷', color: 'eu', label: 'Timeline', desc: 'Key enforcement dates from Feb 2025 through to Dec 2030' },
   { id: 'assess', icon: '⚡', color: 'assess', label: 'Self-Assessment', desc: 'Answer questions about your AI system to get a tailored compliance checklist' },
+  { id: 'updates', icon: '📡', color: 'about', label: 'Updates', desc: 'Curated recent developments and live feeds from EU and UK regulatory sources' },
   { id: 'about', icon: '◉', color: 'about', label: 'About', desc: 'The research and researcher behind this tool' },
 ]
 

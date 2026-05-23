@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { UK_PRINCIPLES, UK_REGULATORS, UK_COMPLIANCE_STEPS } from '../data/governance.js'
+import { UK_PRINCIPLES, UK_REGULATORS, UK_COMPLIANCE_STEPS, UK_KEY_LAWS } from '../data/governance.js'
 import styles from './UKFramework.module.css'
 
 export default function UKFramework() {
@@ -25,7 +25,7 @@ export default function UKFramework() {
       </div>
 
       <div className={styles.viewSwitcher}>
-        {[['principles','Five Principles'],['steps','Compliance Steps'],['regulators','Key Regulators']].map(([v,l]) => (
+        {[['principles','Five Principles'],['steps','Compliance Steps'],['regulators','Key Regulators'],['laws','Key Legislation']].map(([v,l]) => (
           <button key={v} className={`${styles.switchBtn} ${activeView===v?styles.switchActive:''}`}
             onClick={() => setActiveView(v)}>{l}</button>
         ))}
@@ -122,6 +122,35 @@ export default function UKFramework() {
           </div>
         </div>
       )}
+      {activeView === 'laws' && (
+        <div className={styles.lawsWrap}>
+          <p className={styles.stepsIntro}>
+            The UK has no single AI Act. Instead, a patchwork of existing and new laws applies to AI systems
+            depending on context. These are the most significant statutes in force or imminent.
+          </p>
+          <div className={styles.lawsGrid}>
+            {UK_KEY_LAWS.map(law => (
+              <div key={law.id} className={`card ${styles.lawCard}`}
+                style={{ borderTop: `3px solid ${law.color}` }}>
+                <div className={styles.lawStatus}>{law.status}</div>
+                <div className={styles.lawTitle}>{law.label}</div>
+                <p className={styles.lawDesc}>{law.description}</p>
+                <div className="divider" />
+                <p className="section-label">Key provisions for AI</p>
+                <ul className={styles.lawList}>
+                  {law.keyProvisions.map((p, i) => (
+                    <li key={i} className={styles.lawItem}>{p}</li>
+                  ))}
+                </ul>
+                <div className={styles.lawRelevant}>
+                  <strong>Relevant to:</strong> {law.relevantTo}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
     </div>
   )
 }

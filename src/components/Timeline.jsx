@@ -78,6 +78,16 @@ export default function Timeline() {
             <div className={styles.nowLabel}>Large-scale IT systems</div>
             <div className={styles.nowSince}>31 Dec 2030</div>
           </div>
+          <div className={styles.nowItem}>
+            <div className={styles.nowStatus} style={{ color: 'var(--ink3)' }}>○ Future</div>
+            <div className={styles.nowLabel}>Cyber Resilience Act (CRA)</div>
+            <div className={styles.nowSince}>11 Dec 2027</div>
+          </div>
+          <div className={styles.nowItem}>
+            <div className={styles.nowStatus} style={{ color: 'var(--amber)' }}>⚠ Pending</div>
+            <div className={styles.nowLabel}>Digital Omnibus amendments</div>
+            <div className={styles.nowSince}>Awaiting Official Journal — not yet law</div>
+          </div>
         </div>
       </div>
 
@@ -91,6 +101,9 @@ export default function Timeline() {
             { date: 'Sep 2024', label: 'UK signs Council of Europe AI Convention', note: 'Aligns UK with high-level international AI safety commitments.' },
             { date: 'Jun 2025', label: 'Data (Use and Access) Act — Royal Assent', note: 'Addresses data sharing and AI-adjacent concerns but stops short of comprehensive AI regulation.' },
             { date: 'Ongoing', label: 'Sector regulator guidance being published', note: 'ICO, MHRA, FCA and others are continuously updating AI-specific guidance for their sectors.' },
+            { date: 'Jun 2025 – Jun 2026', label: 'Data (Use and Access) Act 2025 — phased commencement', note: 'Relaxes automated decision-making rules, adds children\'s data protections, new complaints procedure for AI-impacted decisions, and copyright/AI training provisions.' },
+            { date: 'Feb 2026', label: 'Online Safety Act — deepfake criminal offences', note: 'Non-consensual AI-generated intimate images (deepfakes) are now criminal offences under the amended Sexual Offences Act 2003.' },
+            { date: '2026', label: 'Government AI Bill expected', note: 'Ministers have signalled plans for a comprehensive statutory AI Bill. The Private Member\'s AI (Regulation) Bill proposes an AI Authority — not yet law but indicates direction of travel.' },
           ].map((item, i) => (
             <div key={i} className={`card ${styles.ukItem}`}>
               <div className={styles.ukDate}>{item.date}</div>

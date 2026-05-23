@@ -8,6 +8,8 @@ export const EU_TIMELINE = [
   { date: "2 Aug 2026", label: "High-risk AI (Annex III)", status: "upcoming", detail: "Full compliance for high-risk systems listed in Annex III (employment, credit, education, law enforcement, etc.). Note: Digital Omnibus proposal in trilogue may delay to Dec 2027." },
   { date: "2 Aug 2027", label: "High-risk AI (Annex I products)", status: "future", detail: "High-risk AI embedded in regulated products (medical devices, machinery, vehicles) under Annex I. Legacy GPAI also fully covered by this date." },
   { date: "31 Dec 2030", label: "Large-scale IT systems", status: "future", detail: "AI components in large-scale EU IT systems (Annex X, e.g. Schengen, Eurodac) must comply." },
+  { date: "11 Dec 2027", label: "Cyber Resilience Act applies", status: "future", detail: "Regulation (EU) 2024/2847 (CRA) introduces horizontal cybersecurity requirements for all products with digital elements — including AI products. Overlaps with AI Act for AI-embedded products. Manufacturers of AI systems must comply with both." },
+  { date: "Pending OJ", label: "Digital Omnibus amendments", status: "future", detail: "Political agreement reached May 2026 between Parliament and Council. Key changes if enacted: Annex III high-risk deadline moves to 2 Dec 2027; Annex I products to 2 Aug 2028; Article 50(2) watermarking delayed to Feb 2027; SME documentation simplified; some database registration requirements removed for non-high-risk systems; simplified requirements extended to small mid-cap companies. NOT YET LAW — requires Official Journal publication." },
 ]
 
 export const EU_RISK_TIERS = [
@@ -297,7 +299,74 @@ export const UK_REGULATORS = [
   { name: "HSE", full: "Health & Safety Executive", focus: "AI in industrial settings, workplace safety", ai_guidance: "Research on AI safety risks in workplaces" },
   { name: "CQC", full: "Care Quality Commission", focus: "AI in health and social care settings", ai_guidance: "AI in health and social care regulatory approach" },
   { name: "CAA", full: "Civil Aviation Authority", focus: "AI in aviation, autonomous systems", ai_guidance: "CAP 2262: Regulation of AI in aviation" },
-  { name: "DSIT", full: "Dept for Science, Innovation & Technology", focus: "Central coordination, principles framework, AISI", ai_guidance: "White Paper response (Feb 2024), DSIT Implementing Principles Guidance" }
+  { name: "DSIT", full: "Dept for Science, Innovation & Technology", focus: "Central coordination, principles framework, AISI", ai_guidance: "White Paper response (Feb 2024), DSIT Implementing Principles Guidance" },
+  { name: "EHRC", full: "Equality and Human Rights Commission", focus: "AI discrimination, algorithmic bias in employment and services", ai_guidance: "Guidance on AI and the Equality Act 2010; algorithmic decision-making and protected characteristics" },
+  { name: "Ofcom", full: "Office of Communications", focus: "Online Safety Act 2023: AI-generated content, deepfakes, algorithmic recommendations, platform duties", ai_guidance: "Online Safety Act codes of practice; AI-generated illegal content guidance" }
+]
+
+export const UK_KEY_LAWS = [
+  {
+    id: "duaa",
+    label: "Data (Use and Access) Act 2025",
+    shortLabel: "DUAA 2025",
+    status: "In force (phased Jun 2025 – Jun 2026)",
+    color: "#1a5276",
+    description: "Significantly updates UK data governance with direct implications for AI systems.",
+    keyProvisions: [
+      "Relaxes UK GDPR Article 22 restrictions on automated decision-making — more flexibility but fairness safeguards remain",
+      "Revised Data Subject Access Requests (DSARs) — new timelines and exemptions affecting AI transparency",
+      "Stricter duties for children's data processing — AI systems interacting with children face tighter rules",
+      "New complaints procedure for individuals affected by automated decisions",
+      "Provisions affecting AI training datasets and copyright for AI-generated outputs"
+    ],
+    relevantTo: "Any organisation using AI to process personal data, make automated decisions, or operating services used by children"
+  },
+  {
+    id: "osa",
+    label: "Online Safety Act 2023",
+    shortLabel: "OSA 2023",
+    status: "In force — Ofcom codes of practice being issued 2024–2026",
+    color: "#7d3c98",
+    description: "Imposes duties on platforms to tackle illegal and harmful content including AI-generated deepfakes and harmful algorithmic recommendations.",
+    keyProvisions: [
+      "Platforms must proactively tackle AI-generated illegal content (CSAM, terrorism, fraud)",
+      "Non-consensual AI-generated intimate images (deepfakes) — criminal offences added Feb 2026",
+      "Algorithmic curation and recommendation systems must be risk-assessed",
+      "Children's safety duties apply to AI-powered recommendation algorithms",
+      "Ofcom can require platforms to use accredited technology to identify and remove illegal content"
+    ],
+    relevantTo: "Online platforms, social media, search engines, and services deploying AI for content recommendation or moderation"
+  },
+  {
+    id: "equality",
+    label: "Equality Act 2010",
+    shortLabel: "Equality Act",
+    status: "In force — applied to AI by EHRC guidance",
+    color: "#1e6b45",
+    description: "Applies directly to AI decisions affecting individuals with protected characteristics.",
+    keyProvisions: [
+      "Direct and indirect discrimination by AI systems is unlawful across 9 protected characteristics",
+      "Public Sector Equality Duty requires public bodies to consider equality impacts of AI deployment",
+      "Employers using AI in recruitment, performance, or termination must ensure no discriminatory outcomes",
+      "AI producing disproportionately adverse outcomes for protected groups may constitute indirect discrimination even without intent"
+    ],
+    relevantTo: "All organisations using AI in employment, service provision, housing, or education"
+  },
+  {
+    id: "ai_bill",
+    label: "Artificial Intelligence (Regulation) Bill",
+    shortLabel: "AI Regulation Bill",
+    status: "Private Member's Bill — not yet law. Government AI Bill expected 2026",
+    color: "#b7770d",
+    description: "Proposed legislation to establish an AI Authority with cross-sectoral coordination powers and binding codes of practice.",
+    keyProvisions: [
+      "Would establish a statutory AI Authority with binding code-of-practice powers",
+      "Mandatory registration of high-risk AI systems",
+      "Government has signalled a more comprehensive official AI Bill is planned for 2026",
+      "No government backing yet — watch this space for direction of travel"
+    ],
+    relevantTo: "Future-watch — signals direction of UK AI legislation"
+  }
 ]
 
 export const UK_COMPLIANCE_STEPS = [
@@ -308,7 +377,9 @@ export const UK_COMPLIANCE_STEPS = [
   { step: 5, label: "Establish AI governance", detail: "Create an AI risk register. Assign board-level accountability. Develop an AI policy covering procurement, development, and deployment decisions." },
   { step: 6, label: "Ensure data protection compliance", detail: "UK GDPR applies whenever personal data is processed. Conduct DPIAs for high-risk AI. Review automated decision-making controls (Article 22)." },
   { step: 7, label: "Build audit trails", detail: "Document how AI systems function, how they were trained, what testing occurred, what monitoring is in place. These records are essential for regulator review." },
-  { step: 8, label: "Consider EU AI Act dual compliance", detail: "If you operate in or affect the EU market, EU AI Act obligations apply regardless of where you are based. Consider building to the higher standard." }
+  { step: 8, label: "Check Data (Use and Access) Act 2025 obligations", detail: "If your AI system processes personal data or makes automated decisions, review DUAA 2025. The Act relaxes some Article 22 restrictions but adds new requirements for children's data and automated decision complaints procedures." },
+  { step: 9, label: "Check Online Safety Act 2023 if you run a platform", detail: "If you operate an online platform deploying AI for content recommendation, moderation, or generation, Ofcom's OSA codes of practice apply. Deepfake creation without consent is now a criminal offence (Feb 2026)." },
+  { step: 10, label: "Consider EU AI Act dual compliance", detail: "If you operate in or affect the EU market, EU AI Act obligations apply regardless of where you are based. Building to EU standards satisfies UK principles too." }
 ]
 
 // ─── COMPARISON DATA ─────────────────────────────────────────────────────────
