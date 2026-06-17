@@ -3,20 +3,6 @@ import styles from './Updates.module.css'
 
 const FEEDS = [
   {
-  source: '🇪🇺 European Parliament',
-  date: '16 Jun 2026',
-  title: 'EP approves Digital Omnibus: Annex III deadline moves to Dec 2027, nudifier apps banned from Dec 2026',
-  url: 'https://www.europarl.europa.eu/news/en/press-room/20260611IPR45207/ai-act-ep-approves-simplification-measures-and-nudifier-app-ban',
-  tag: 'Digital Omnibus'
-},
-{
-  source: '🇪🇺 European Commission',
-  date: 'Jun 2026',
-  title: 'Official EU icons published for labelling AI-generated content under Article 50(4)',
-  url: 'https://digital-strategy.ec.europa.eu/en/policies/eu-icons-labelling-ai-generated-content',
-  tag: 'EU AI Act'
-},
-  {
     id: 'ec_ai',
     label: 'European Commission — AI policy',
     flag: '🇪🇺',
@@ -47,6 +33,20 @@ const FEEDS = [
 ]
 
 const MANUAL_UPDATES = [
+  {
+  source: '🇪🇺 European Parliament',
+  date: '16 Jun 2026',
+  title: 'EP approves Digital Omnibus: Annex III deadline moves to Dec 2027, nudifier apps banned from Dec 2026',
+  url: 'https://www.europarl.europa.eu/news/en/press-room/20260611IPR45207/ai-act-ep-approves-simplification-measures-and-nudifier-app-ban',
+  tag: 'Digital Omnibus'
+  },
+  {
+  source: '🇪🇺 European Commission',
+  date: 'Jun 2026',
+  title: 'Official EU icons published for labelling AI-generated content under Article 50(4)',
+  url: 'https://digital-strategy.ec.europa.eu/en/policies/eu-icons-labelling-ai-generated-content',
+  tag: 'EU AI Act'
+  },
   {
     source: '🇪🇺 European Commission',
     date: '19 May 2026',
@@ -225,7 +225,7 @@ export default function Updates() {
             </div>
           ))}
           <p className={styles.curatedNote}>
-            Curated manually — last reviewed May 2026. For real-time updates use the Live feeds tab or subscribe directly to official sources.
+            Curated manually — last reviewed June 2026. For real-time updates use the Live feeds tab or subscribe directly to official sources.
           </p>
         </div>
       )}

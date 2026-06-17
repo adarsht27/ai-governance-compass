@@ -17,7 +17,7 @@ export default function Hero({ onNavigate }) {
       <div className={styles.eyebrow}>
         <span className="badge badge-eu">Regulation (EU) 2024/1689</span>
         <span className="badge badge-uk">UK DSIT Framework 2024</span>
-        <span className="badge badge-warn">Updated May 2026</span>
+        <span className="badge badge-warn">Updated June 2026</span>
       </div>
 
       <h1 className={styles.heading}>

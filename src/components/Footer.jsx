@@ -27,7 +27,7 @@ export default function Footer() {
       </div>
       <div className={styles.disclaimer}>
         For educational and research purposes only. This tool synthesises publicly available regulatory guidance and does not constitute legal advice.
-        Always consult the source regulation and qualified legal counsel for compliance decisions. Last updated May 2026.
+        Always consult the source regulation and qualified legal counsel for compliance decisions. Last updated June 2026.
       </div>
     </footer>
   )

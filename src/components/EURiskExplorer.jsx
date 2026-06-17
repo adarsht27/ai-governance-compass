@@ -10,12 +10,13 @@ export default function EURiskExplorer() {
   return (
     <div className={`${styles.wrap} fade-in`}>
       <div className={styles.pageHeader}>
-        <p className="section-label">EU AI Act</p>
-        <h2 className={styles.heading}>Risk Classification System</h2>
-        <p className={styles.subhead}>
+          <p className="section-label">Regulation (EU) 2024/1689</p>
+          <h2 className={styles.heading}>EU AI Act</h2>
+          <p className={styles.subheadSub}>Risk Classification System</p>
+          <p className={styles.subhead}>
           The EU AI Act classifies all AI systems into four tiers. Your tier determines your obligations.
           Select a tier to explore in detail.
-        </p>
+          </p>
       </div>
 
       {/* Tier selector */}

@@ -12,16 +12,16 @@ export default function Timeline() {
         <h2 className={styles.heading}>Enforcement Timeline</h2>
         <p className={styles.subhead}>
           The Act uses a phased rollout — different obligations apply at different dates.
-          The Digital Omnibus proposal (in trilogue as of May 2026) may delay high-risk deadlines.
         </p>
       </div>
 
       <div className={styles.digitalOmnibus}>
-        <strong>⚠ Digital Omnibus (May 2026 update):</strong> The European Commission has proposed
-        simplifications to the AI Act, potentially delaying the Annex III high-risk deadline from
-        August 2026 to December 2027, and Annex I to August 2028. Parliament and Council have adopted
-        positions; trilogue is ongoing. Until published in the Official Journal, original dates apply.
-        Also proposed: prohibition of AI "nudification" tools and conversion of AI literacy from mandatory to state-encouraged.
+        <strong>✓ Digital Omnibus — EP approved 16 June 2026 (423 votes in favour):</strong> The European Parliament 
+        has formally adopted the Digital Omnibus amendments. Awaiting Council formal adoption and Official Journal 
+        publication (expected July 2026, ahead of 2 August deadline). Once published: Annex III high-risk deadline 
+        moves to 2 December 2027; Annex I products to 2 August 2028; watermarking (Art. 50(2)) to 2 December 2026; 
+        nudifier apps and CSAM generation banned from 2 December 2026; AI literacy obligation softened; safety component
+         definition narrowed.
       </div>
 
       <div className={styles.timeline}>
@@ -46,7 +46,7 @@ export default function Timeline() {
       </div>
 
       <div className={styles.nowBox}>
-        <p className="section-label">Where we are now — May 2026</p>
+        <p className="section-label">Where we are now — June 2026</p>
         <div className={styles.nowGrid}>
           <div className={styles.nowItem}>
             <div className={styles.nowStatus} style={{ color: 'var(--eu-red)' }}>✓ Enforceable</div>
@@ -66,12 +66,12 @@ export default function Timeline() {
           <div className={styles.nowItem}>
             <div className={styles.nowStatus} style={{ color: 'var(--amber)' }}>⏳ Upcoming</div>
             <div className={styles.nowLabel}>High-risk AI (Annex III)</div>
-            <div className={styles.nowSince}>2 Aug 2026 (may shift to Dec 2027)</div>
+            <div className={styles.nowSince}>Dec 2027 (Digital Omnibus — pending OJ)</div>
           </div>
           <div className={styles.nowItem}>
             <div className={styles.nowStatus} style={{ color: 'var(--ink3)' }}>○ Future</div>
             <div className={styles.nowLabel}>High-risk AI (Annex I products)</div>
-            <div className={styles.nowSince}>2 Aug 2027</div>
+            <div className={styles.nowSince}>2 Aug 2028 (Digital Omnibus — pending OJ)</div>
           </div>
           <div className={styles.nowItem}>
             <div className={styles.nowStatus} style={{ color: 'var(--ink3)' }}>○ Future</div>
