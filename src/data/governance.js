@@ -9,7 +9,7 @@ export const EU_TIMELINE = [
   { date: "2 Aug 2027", label: "High-risk AI (Annex I products)", status: "future", detail: "High-risk AI embedded in regulated products (medical devices, machinery, vehicles) under Annex I. Legacy GPAI also fully covered by this date." },
   { date: "31 Dec 2030", label: "Large-scale IT systems", status: "future", detail: "AI components in large-scale EU IT systems (Annex X, e.g. Schengen, Eurodac) must comply." },
   { date: "11 Dec 2027", label: "Cyber Resilience Act applies", status: "future", detail: "Regulation (EU) 2024/2847 (CRA) introduces horizontal cybersecurity requirements for all products with digital elements — including AI products. Overlaps with AI Act for AI-embedded products. Manufacturers of AI systems must comply with both." },
-  { date: "Pending OJ", label: "Digital Omnibus amendments", status: "future", detail: "Political agreement reached May 2026 between Parliament and Council. Key changes if enacted: Annex III high-risk deadline moves to 2 Dec 2027; Annex I products to 2 Aug 2028; Article 50(2) watermarking delayed to Feb 2027; SME documentation simplified; some database registration requirements removed for non-high-risk systems; simplified requirements extended to small mid-cap companies. NOT YET LAW — requires Official Journal publication." },
+  { date: "16 Jun 2026", label: "Digital Omnibus amendments", status: "future", detail: "EP approved 423-57 on 16 Jun 2026. Awaiting formal Council adoption (expected Jul 2026). Key changes: Annex III high-risk → 2 Dec 2027; Annex I products → 2 Aug 2028; watermarking → 2 Dec 2026; nudifier apps and CSAM generation banned from 2 Dec 2026 (new Art. 5 prohibitions); AI literacy softened from 'ensure' to 'take measures to support'; safety component definition narrowed." },
 ]
 
 export const EU_RISK_TIERS = [
@@ -32,7 +32,9 @@ export const EU_RISK_TIERS = [
       "Predictive policing based solely on profiling / personality traits",
       "Compiling facial recognition databases via untargeted scraping",
       "Emotion recognition in workplaces or educational institutions (except medical/safety)",
-      "Real-time remote biometric ID in public spaces for law enforcement (narrow exceptions only)"
+      "Real-time remote biometric ID in public spaces for law enforcement (narrow exceptions only)",
+      "AI generating non-consensual intimate images (nudifier apps) — banned from 2 Dec 2026",
+      "AI generating child sexual abuse material (CSAM) — banned from 2 Dec 2026"
     ],
     obligations: [],
     penalties: "€35M or 7% of global annual turnover (whichever is higher)",
@@ -48,7 +50,7 @@ export const EU_RISK_TIERS = [
     border: "#f9e4b0",
     icon: "▲",
     article: "Articles 6–17, Annex III",
-    status: "Compliance required — Aug 2026",
+    status: "Annex III: 2 Dec 2027 | Annex I: 2 Aug 2028 (Digital Omnibus)",
     description: "AI systems that significantly impact health, safety, or fundamental rights. Subject to strict pre-market conformity assessment and ongoing obligations.",
     annexIII: [
       { sector: "Biometrics", uses: ["Remote biometric ID systems", "Biometric categorisation inferring sensitive attributes", "Emotion recognition systems"] },
